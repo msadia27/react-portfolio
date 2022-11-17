@@ -22,28 +22,22 @@ function App() {
       name: "Resume",
     },
   ]);
+
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
-  const display = () => {
-    switch (currentCategory.name) {
-      case "About":
-        return <About />;
-      case "Contact":
-        return <Contact />;
-      case "Portfolio":
-        return <Portfolio />;
-      case "resume":
-        return <Resume />;
-    }
-  };
 
   return (
     <div>
-      <Nav>
+      <Nav
         categories={categories}
         setCurrentCategory={setCurrentCategory}
         currentCategory={currentCategory}
-      </Nav>
-      <main>{display()};</main>
+      ></Nav>
+      <main>
+        {currentCategory.name === "About" ? <About /> : <></>}
+        {currentCategory.name === "Portfolio" ? <Portfolio /> : <></>}
+        {currentCategory.name === "Contact" ? <Contact /> : <></>}
+        {currentCategory.name === "Resume" ? <Resume /> : <></>}
+      </main>
       <Footer></Footer>
     </div>
   );
