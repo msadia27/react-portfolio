@@ -14,4 +14,4 @@ SO THAT I can assess whether they're a good candidate for an open position
 
 # screenshot
 
-(react-portfolio/screenshotoflocalhost.jpg)
+[react-portfolio/screenshotoflocalhost.jpg]
